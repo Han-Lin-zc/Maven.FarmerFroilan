@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
-public class CornStalk {
+public class CornStalk extends Crop{
 }
