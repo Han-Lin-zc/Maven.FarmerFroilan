@@ -6,7 +6,8 @@ import java.util.ArrayList;
 
 public class Stable{
     public ArrayList<Horse> jeff;
-    public void addHorse(){}
+    public void addHorse(){
+    }
 
 
 
