@@ -20,7 +20,23 @@ public class Chicken extends Animal implements Produce
 
     public Egg yield()
     {
-        // TODO: Check if chicken is pregnant
-        return new Egg();
+        if(isFertilized == false) {
+            return new Egg();
+        }
+        else
+        {
+            // TODO: I really hate this.
+            return null;
+        }
+    }
+
+    public Boolean getIsFertilized()
+    {
+        return isFertilized;
+    }
+
+    private void fertilize()
+    {
+        isFertilized = true;
     }
 }
