@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
-public class CornStalk extends Crop{
+import com.zipcodewilmington.froilansfarm.buildings.ChickenCoop;
+
+public class CornStalk extends ChickenCoop {
 }
