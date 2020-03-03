@@ -1,4 +1,6 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
-public class Crop {
+import com.zipcodewilmington.froilansfarm.interfaces.Produce;
+
+public class Crop implements Produce {
 }
