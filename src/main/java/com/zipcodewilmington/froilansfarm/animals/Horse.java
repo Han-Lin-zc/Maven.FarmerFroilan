@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.animals;
 
-public class Horse {
+public class Horse extends Animal {
 }
