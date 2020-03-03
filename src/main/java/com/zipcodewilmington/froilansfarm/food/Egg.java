@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm.food;
 
-public class Egg {
+public class Egg extends Food {
 }
