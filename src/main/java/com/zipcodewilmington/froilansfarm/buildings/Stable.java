@@ -9,8 +9,6 @@ public class Stable{
     public void addHorse(){
     }
 
-
-
     public Integer getHorse(){
            return null;
         }
