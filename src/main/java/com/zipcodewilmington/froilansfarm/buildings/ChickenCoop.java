@@ -20,4 +20,12 @@ public class ChickenCoop {
     public List<Chicken> getChickens() {
         return chickens;
     }
+
+    public Boolean addChicken(Chicken addedChicken) {
+        if (chickens.contains(addedChicken)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
