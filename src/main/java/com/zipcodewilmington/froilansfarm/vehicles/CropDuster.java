@@ -3,9 +3,22 @@ package com.zipcodewilmington.froilansfarm.vehicles;
 
 public class CropDuster extends FarmVehicle implements AirCraft {
 
-    public Boolean fly()
-    {
-        return true;
+    private boolean isFlying = false;
+
+    public Boolean fly() {
+        if (!isFlying) {
+            this.isFlying = true;
+            return true;
+        }
+        return false;
+    }
+
+    public Boolean land() {
+        if (isFlying) {
+            this.isFlying = false;
+            return true;
+        }
+        return false;
     }
 
     public String makeNoise()
