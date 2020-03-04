@@ -9,6 +9,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 public abstract class Person implements NoiseMaker, Eater, Rider
 {
     String name;
+    Boolean isMounted = false;
 
     public Person(String startingName)
     {
@@ -45,11 +46,19 @@ public abstract class Person implements NoiseMaker, Eater, Rider
 
     public Boolean mount(Rideable mount)
     {
-        return null;
+        if(mount instanceof Rideable && isMounted == false){
+            this.isMounted = true;
+            return true;
+        }
+        else return false;
     }
 
     public Boolean unmount()
     {
-        return null;
+        if(isMounted == true){
+            this.isMounted = false;
+            return true;
+        }
+        else {return false;}
     }
 }
