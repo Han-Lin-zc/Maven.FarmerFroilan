@@ -21,11 +21,12 @@ public class ChickenCoop {
         return chickens;
     }
 
-    public Boolean addChicken(Chicken addedChicken) {
+    public Boolean addChicken(int addedChicken) {
         if (chickens.contains(addedChicken)) {
             return true;
         } else {
             return false;
         }
     }
+
 }
