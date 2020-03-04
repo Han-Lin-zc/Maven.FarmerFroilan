@@ -1,50 +1,25 @@
 package com.zipcodewilmington.froilansfarm.buildings;
 
+import com.zipcodewilmington.froilansfarm.animals.Chicken;
+
+import java.util.List;
+
 public class ChickenCoop {
-    public class Dog {
-        String name;
-        String color;
-        int age;
-        String breed;
+    private List<Chicken> chickens;
 
-        public Dog(String name, String color) {
-            this.name = name;
-            this.color = color;
-        }
+    public ChickenCoop() {
 
-        public String getName() {
-            return name;
-        }
+    }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+    public ChickenCoop(List<Chicken> chickens) {
+        this.chickens = chickens;
+    }
 
-        public String getColor() {
-            return color;
-        }
+    public List<Chicken> getChickens() {
+        return chickens;
+    }
 
-        public void setColor(String color) {
-            this.color = color;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-        public void setAge(int age) {
-            this.age = age;
-        }
-
-        public String getBreed() {
-            return breed;
-        }
-
-        public void setBreed(String breed) {
-            this.breed = breed;
-        }
-
-        void bark() {
-        }
+    public void setChickens(List<Chicken> chickens) {
+        this.chickens = chickens;
     }
 }
