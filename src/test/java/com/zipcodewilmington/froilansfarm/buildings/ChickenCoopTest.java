@@ -1,6 +1,9 @@
 package com.zipcodewilmington.froilansfarm.buildings;
 
 import com.zipcodewilmington.froilansfarm.animals.Chicken;
+import com.zipcodewilmington.froilansfarm.animals.Horse;
+import com.zipcodewilmington.froilansfarm.people.Pilot;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChickenCoopTest {
-    ChickenCoop testChickenCoop;
+    ChickenCoop testChickenCoop = new ChickenCoop();
+
+
 
     @Before
     public void setup() {
@@ -17,15 +22,13 @@ public class ChickenCoopTest {
 
     @Test
     public void addChickenTest() {
-        List<Integer> chickens = new ArrayList<>(0);
-        int actual = chickens.size();
-        //int expected = chickens.get(chickens.size();
-
+        Chicken chicken = new Chicken();
     }
-
 
     @Test
-    public void addChickenCoopTest() {
-
+     public void testArrayList() {
+        Chicken chicken = new Chicken();
+        List<Chicken> arrayList = new ArrayList<>();
+        Assert.assertTrue(arrayList.add(chicken));
     }
-}
+    }
