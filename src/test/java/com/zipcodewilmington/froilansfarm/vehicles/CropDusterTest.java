@@ -4,23 +4,23 @@ import com.zipcodewilmington.froilansfarm.people.Pilot;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 public class CropDusterTest {
 
     @Test
     public void flyTest() {
         CropDuster cropDuster = new CropDuster();
-
+        Pilot pilot = new Pilot("Zeth");
+        pilot.mount(cropDuster);
         Assert.assertTrue(cropDuster.fly());
     }
 
     @Test
     public void flyTest2() {
         CropDuster cropDuster = new CropDuster();
-
+        Pilot pilot = new Pilot("Zeth");
+        pilot.mount(cropDuster);
         cropDuster.fly();
-
         Assert.assertFalse(cropDuster.fly());
     }
 
@@ -28,15 +28,21 @@ public class CropDusterTest {
     @Test
     public void landTest() {
         CropDuster cropDuster = new CropDuster();
+        Pilot pilot = new Pilot("Zeth");
+        pilot.mount(cropDuster);
         cropDuster.fly();
         Assert.assertTrue(cropDuster.land());
     }
 
+
     @Test
     public void landTest2() {
         CropDuster cropDuster = new CropDuster();
+        Pilot pilot = new Pilot("Zeth");
+        pilot.mount(cropDuster);
         Assert.assertFalse(cropDuster.land());
     }
+
 
     @Test
     public void makeNoise() {
