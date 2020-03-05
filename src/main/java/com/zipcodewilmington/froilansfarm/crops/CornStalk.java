@@ -3,7 +3,6 @@ package com.zipcodewilmington.froilansfarm.crops;
 import com.zipcodewilmington.froilansfarm.food.Corn;
 import com.zipcodewilmington.froilansfarm.food.Food;
 
-
 public class CornStalk extends Crop
 {
     @Override
@@ -15,7 +14,6 @@ public class CornStalk extends Crop
         }
         else
         {
-            // TODO: We should never be passing around nulls
             return null;
         }
     }

@@ -13,4 +13,9 @@ public class Horse extends Animal implements Rideable
     {
         this("");
     }
+
+    @Override
+    public String makeNoise() {
+        return "Neigh!";
+    }
 }
