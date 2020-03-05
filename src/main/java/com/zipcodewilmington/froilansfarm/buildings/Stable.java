@@ -11,6 +11,7 @@ public class Stable{
     public Stable(){
         this.horses = new ArrayList<>();
     }
+
     public Stable(List<Horse>horses){
         this.horses = horses;
     }
@@ -18,13 +19,24 @@ public class Stable{
     public List<Horse> getHorses() {
         return horses;
     }
-    public Boolean addHorse(Horse addedHorse){
-        if(horses.contains(addedHorse)) {
-            return true;
-        }else {
-            return false;
-        }
+
+    public void addHorse(Horse addHorse1){
+
+        this.horses.add(addHorse1);
     }
+
+    public void removeHorse(Horse horse) {
+        this.horses.remove(horse);
+    }
+
+    public Integer horseCount() {
+        return horses.size();
+    }
+
+    public Horse getHorse(Integer i) {
+        return horses.get(i);
+    }
+
 }
 
 
