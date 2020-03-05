@@ -1,12 +1,17 @@
 package com.zipcodewilmington.froilansfarm.vehicles;
 
 import com.zipcodewilmington.froilansfarm.crops.Crop;
-import com.zipcodewilmington.froilansfarm.food.Food;
+
 
 public class Tractor extends FarmVehicle {
 
-    public Crop harvest() {
+    private boolean canHarvest = false;
 
+
+    public Crop harvest() {
+        if (isOnFarm == true) {
+            this.canHarvest = true;
+        }
         return null;
     }
 
