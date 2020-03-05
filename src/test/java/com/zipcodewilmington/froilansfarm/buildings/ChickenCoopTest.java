@@ -71,19 +71,6 @@ public class ChickenCoopTest {
     }
 
     @Test
-    public void getChickenTest() {
-        Chicken chicken = new Chicken();
-        testChickenCoop.addChicken(new Chicken());
-        testChickenCoop.addChicken(new Chicken());
-        testChickenCoop.addChicken(chicken);
-
-        Chicken actual = chicken;
-        Chicken expected = testChickenCoop.getChicken(2);
-
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
     public void testArrayListSize5() {
         List<Chicken> arrayList = new ArrayList<>();
         arrayList.add(chicken1);
@@ -116,13 +103,6 @@ public class ChickenCoopTest {
         Assert.assertEquals(arrayList1, arrayList2);
     }
 
-    @Test
-    public void testArrayListAddIndex() {
-        List<Chicken> arrayList = new ArrayList<>();
-        arrayList.add(chicken1);
-        arrayList.add(0, chicken1);
-        Assert.assertEquals(chicken1, arrayList.get(0));
-    }
 
     @Test
     public void testArrayListRemove() {
