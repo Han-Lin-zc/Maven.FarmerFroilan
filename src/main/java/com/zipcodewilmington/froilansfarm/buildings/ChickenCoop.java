@@ -22,14 +22,6 @@ public class ChickenCoop  {
         return chickens;
     }
 
-    public Boolean addChicken(int addedChicken) {
-        if (chickens.contains(addedChicken)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public void addChicken(Chicken chicken) {
         this.chickens.add(chicken);
     }
@@ -49,5 +41,7 @@ public class ChickenCoop  {
     public boolean remove(Chicken chicken) {
         return chickens.remove(chickens);
     }
+
+
 }
 

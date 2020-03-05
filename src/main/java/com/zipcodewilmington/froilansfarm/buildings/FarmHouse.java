@@ -34,8 +34,8 @@ public class FarmHouse {
 
     public void FarmHouse1(){
         persons = new ArrayList<Person>();
-        persons.add(new Farmer("April"));
-        persons.add(new Pilot("April"));
+        persons.add(new Farmer("Froilan"));
+        persons.add(new Pilot("Frolinda"));
     }
 
     public void addPerson1(Person person){

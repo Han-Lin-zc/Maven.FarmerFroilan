@@ -1,10 +1,6 @@
 package com.zipcodewilmington.froilansfarm.buildings;
 
 import com.zipcodewilmington.froilansfarm.animals.Chicken;
-import com.zipcodewilmington.froilansfarm.animals.Horse;
-import com.zipcodewilmington.froilansfarm.crops.Crop;
-import com.zipcodewilmington.froilansfarm.crops.TomatoPlant;
-import com.zipcodewilmington.froilansfarm.people.Pilot;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,20 +8,43 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-
 public class ChickenCoopTest {
-    ChickenCoop testChickenCoop = new ChickenCoop();
-    Chicken chicken1 = new Chicken();
-    Chicken chicken2 = new Chicken();
-    Chicken chicken3 = new Chicken();
-    Chicken chicken4 = new Chicken();
-    Chicken chicken5 = new Chicken();
-    ChickenCoop testChickenCoop1;
+    Chicken chicken1;
+    Chicken chicken2;
+    Chicken chicken3;
+    Chicken chicken4;
+    Chicken chicken5;
+    private ChickenCoop testChickenCoop;
+
+
+    public ChickenCoopTest() {
+        ChickenCoop testChickenCoop = new ChickenCoop();
+        ChickenCoop testChickenCoop1;
+    }
 
     @Before
     public void setup() {
         testChickenCoop = new ChickenCoop();
+        chicken1 = new Chicken();
+        chicken2 = new Chicken();
+        Chicken chicken3 = new Chicken();
+        Chicken chicken4 = new Chicken();
+        Chicken chicken5 = new Chicken();
+    }
+
+    @Test
+    public void ChickenCoopTest(){
+        Assert.assertNotNull(testChickenCoop);
+    }
+
+    @Test
+    public void ChickenCoopConstructorTest() {
+        List<Chicken> expected = new ArrayList<>();
+        expected.add(chicken1);
+        ChickenCoop testedFilled = new ChickenCoop(expected);
+        List<Chicken> actual = testedFilled.getChickens();
+        Assert.assertEquals(expected, actual);
+
     }
 
     @Test
@@ -36,12 +55,12 @@ public class ChickenCoopTest {
 
     @Test
     public void testArrayListAddAll() {
-        List<Chicken> arrayList = new ArrayList<>();
-        List<Chicken> arrayList1 = new ArrayList<>();
-        arrayList1.add(chicken1);
-        arrayList1.add(chicken2);
-        arrayList.addAll(arrayList1);
-        Assert.assertEquals(arrayList, arrayList1);
+        List<Chicken> expected = new ArrayList<>();
+        expected.add(chicken1);
+        testChickenCoop.addChicken(chicken1);
+        List<Chicken> actual = testChickenCoop.getChickens();
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -49,6 +68,19 @@ public class ChickenCoopTest {
         Chicken chicken = new Chicken();
         List<Chicken> arrayList = new ArrayList<>();
         Assert.assertTrue(arrayList.add(chicken));
+    }
+
+    @Test
+    public void getChickenTest() {
+        Chicken chicken = new Chicken();
+        testChickenCoop.addChicken(new Chicken());
+        testChickenCoop.addChicken(new Chicken());
+        testChickenCoop.addChicken(chicken);
+
+        Chicken actual = chicken;
+        Chicken expected = testChickenCoop.getChicken(2);
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -109,22 +141,22 @@ public class ChickenCoopTest {
 
         Assert.assertEquals(expected, actual);
     }
+
     @Test
-    public void removeChickenTestMultible() {
-        testChickenCoop.addChicken(new Chicken());
-        testChickenCoop.addChicken(new Chicken());
-        testChickenCoop.addChicken(new Chicken());
-        testChickenCoop.addChicken(new Chicken());
+    public void removeChickenTest() {
+        Chicken chicken1 = new Chicken();
+        Chicken actual = chicken1;
+        Integer actualSize = 1;
+        testChickenCoop.addChicken(chicken1);
+        testChickenCoop.remove(chicken1);
 
-        testChickenCoop.removeChicken(testChickenCoop.getChicken(0));
+        Integer expectedSize = testChickenCoop.chickenCount();
 
-        Integer actual = 3;
-        Integer expected = testChickenCoop.chickenCount();
-
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expectedSize, actualSize);
     }
+
     @Test
-    public void removeChickenTestMultibleTest() {
+    public void removeChickenTestMultiple() {
         testChickenCoop.addChicken(new Chicken());
         testChickenCoop.addChicken(new Chicken());
         testChickenCoop.addChicken(new Chicken());
@@ -135,7 +167,22 @@ public class ChickenCoopTest {
         Integer actual = 3;
         Integer expected = testChickenCoop.chickenCount();
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void removeChickenTestMultipleTest() {
+        testChickenCoop.addChicken(new Chicken());
+        testChickenCoop.addChicken(new Chicken());
+        testChickenCoop.addChicken(new Chicken());
+        testChickenCoop.addChicken(new Chicken());
+
+        testChickenCoop.removeChicken(testChickenCoop.getChicken(0));
+
+        Integer actual = 3;
+        Integer expected = testChickenCoop.chickenCount();
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -143,12 +190,12 @@ public class ChickenCoopTest {
         testChickenCoop.addChicken(new Chicken());
         testChickenCoop.addChicken(new Chicken());
         testChickenCoop.addChicken(new Chicken());
-        testChickenCoop .addChicken(new Chicken());
+        testChickenCoop.addChicken(new Chicken());
 
         Integer actual = 4;
         Integer expected = testChickenCoop.chickenCount();
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
+    
     }
 }
-
