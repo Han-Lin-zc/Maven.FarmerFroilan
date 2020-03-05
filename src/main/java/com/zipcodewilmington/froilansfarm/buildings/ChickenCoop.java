@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.animals.Chicken;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChickenCoop {
+public class ChickenCoop  {
     private List<Chicken> chickens;
 
     public ChickenCoop() {
@@ -29,3 +29,4 @@ public class ChickenCoop {
         }
     }
 }
+
