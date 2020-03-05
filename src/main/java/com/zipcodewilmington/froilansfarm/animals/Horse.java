@@ -11,4 +11,9 @@ public class Horse extends Animal
     {
         this("");
     }
+
+    @Override
+    public String makeNoise() {
+        return "Neigh!";
+    }
 }

@@ -39,4 +39,9 @@ public class Chicken extends Animal implements Produce
     {
         isFertilized = true;
     }
+
+    @Override
+    public String makeNoise() {
+        return "Bawk bawk bawk.";
+    }
 }

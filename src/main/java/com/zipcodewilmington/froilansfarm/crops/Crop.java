@@ -14,6 +14,25 @@ public class Crop implements Produce
         hasBeenHarvested = false;
     }
 
+    public Boolean fertilize()
+    {
+        hasBeenFertilized = true;
+
+        return hasBeenFertilized;
+    }
+
+    public Boolean canHarvest()
+    {
+        if(hasBeenHarvested == false && hasBeenFertilized == true)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public Food yield() {
         if(hasBeenFertilized == true && hasBeenHarvested == false)
         {
@@ -21,7 +40,6 @@ public class Crop implements Produce
         }
         else
         {
-            // TODO: We should never be passing around nulls
             return null;
         }
     }

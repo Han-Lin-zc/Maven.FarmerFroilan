@@ -16,7 +16,7 @@ public class FarmHouse {
         this.persons = persons;
     }
 
-    public List<Person> getPrsons() {
+    public List<Person> getPersons() {
         return persons;
     }
 

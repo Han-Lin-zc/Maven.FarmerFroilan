@@ -1,26 +1,33 @@
 package com.zipcodewilmington.froilansfarm.crops;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-import com.zipcodewilmington.froilansfarm.food.Food;
+public class CropRow<CropType extends Crop> implements Iterable<CropType>
+{
+    private List<CropType> plants;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class CropRow {
-
-    Map<Crop, Food> cropStorage;
-
-    public CropRow() {
-        this.cropStorage = new HashMap<>();
+    public CropRow(List<CropType> startingCrops)
+    {
+        plants = new ArrayList<>();
+        plants.addAll(startingCrops);
     }
 
+    public CropRow()
+    {
+        this(new ArrayList<CropType>());
+    }
 
-    public Map<Crop, Food> storage() {
+    public Boolean plantInRow(CropType addedPlant)
+    {
+        plants.add(addedPlant);
 
-        Crop crop = new Crop();
-        if (crop.yield().equals(new Food())) {
-            cropStorage.put(crop,crop.yield());
-        }
-        return null;
+        return plants.contains(addedPlant);
+    }
+
+    @Override
+    public Iterator<CropType> iterator() {
+        return plants.iterator();
     }
 }
