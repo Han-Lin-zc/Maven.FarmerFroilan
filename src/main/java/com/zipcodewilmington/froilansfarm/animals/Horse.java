@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm.animals;
 
-public class Horse extends Animal
+import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
+
+public class Horse extends Animal implements Rideable
 {
     public Horse(String inputName)
     {
@@ -12,5 +14,12 @@ public class Horse extends Animal
         this("");
     }
 
+<<<<<<< HEAD
 
+=======
+    @Override
+    public String makeNoise() {
+        return "Neigh!";
+    }
+>>>>>>> dev
 }

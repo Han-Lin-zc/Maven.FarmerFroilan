@@ -5,7 +5,7 @@ import com.zipcodewilmington.froilansfarm.animals.Chicken;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChickenCoop {
+public class ChickenCoop  {
     private List<Chicken> chickens;
 
     public ChickenCoop() {
@@ -20,4 +20,13 @@ public class ChickenCoop {
     public List<Chicken> getChickens() {
         return chickens;
     }
+
+    public Boolean addChicken(Chicken addedChicken) {
+        if (chickens.contains(addedChicken)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
+
