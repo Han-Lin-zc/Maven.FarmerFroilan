@@ -12,8 +12,8 @@ import java.util.List;
 
 public class ChickenCoopTest {
     ChickenCoop testChickenCoop = new ChickenCoop();
-
-
+    Chicken chicken = new Chicken();
+    Chicken chicken1 = new Chicken();
 
     @Before
     public void setup() {
@@ -22,13 +22,31 @@ public class ChickenCoopTest {
 
     @Test
     public void addChickenTest() {
-        Chicken chicken = new Chicken();
+        List<Chicken> arrayList = new ArrayList<>();
+        Assert.assertTrue(arrayList.add(chicken));
     }
 
     @Test
-     public void testArrayList() {
+    public void testArrayListAddAll() {
+        List<Chicken> arrayList = new ArrayList<>();
+        List<Chicken> arrayList1 = new ArrayList<>();
+        arrayList1.add(chicken);
+        arrayList1.add(chicken1);
+        arrayList.addAll(arrayList1);
+        Assert.assertEquals(arrayList, arrayList1);
+    }
+
+    @Test
+    public void testArrayList() {
         Chicken chicken = new Chicken();
         List<Chicken> arrayList = new ArrayList<>();
         Assert.assertTrue(arrayList.add(chicken));
     }
+
+    @Test
+    public void testArrayListSize() {
+        List<Chicken> arrayList = new ArrayList<>();
+        arrayList.add(chicken);
     }
+}
+
