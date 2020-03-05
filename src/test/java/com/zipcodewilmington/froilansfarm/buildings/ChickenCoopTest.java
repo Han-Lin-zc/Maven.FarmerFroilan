@@ -66,6 +66,15 @@ public class ChickenCoopTest {
         arrayList.add(chicken3);
         arrayList.add(chicken4);
     }
+    @Test
+    public void testArrayListRemoveAll() {
+        List<Chicken> arrayList1 = new ArrayList<>();
+        List<Chicken> arrayList2 = new ArrayList<>();
+        arrayList2.remove(chicken1 );
+        arrayList2.remove(chicken2);
+        arrayList1.removeAll(arrayList2);
+        Assert.assertEquals(arrayList1, arrayList2);
+    }
 
     @Test
     public void testArrayListAddIndex() {
