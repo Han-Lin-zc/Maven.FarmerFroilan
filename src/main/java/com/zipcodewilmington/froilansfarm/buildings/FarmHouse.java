@@ -1,12 +1,16 @@
 package com.zipcodewilmington.froilansfarm.buildings;
 
+import com.zipcodewilmington.froilansfarm.people.Farmer;
 import com.zipcodewilmington.froilansfarm.people.Person;
+import com.zipcodewilmington.froilansfarm.people.Pilot;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FarmHouse {
     private List<Person> persons;
+    private static FarmHouse FARMHOUSE = new FarmHouse();
+    ;
 
     public FarmHouse(){
         this.persons = new ArrayList<>();
@@ -26,5 +30,27 @@ public class FarmHouse {
         } else {
             return false;
         }
+    }
+
+    public void FarmHouse1(){
+        persons = new ArrayList<Person>();
+        persons.add(new Farmer("April"));
+        persons.add(new Pilot("April"));
+    }
+
+    public void addPerson1(Person person){
+        persons.add(person);
+    }
+
+    public Integer getCount(){
+        return persons.size();
+    }
+
+    public ArrayList<Person> getList(){
+        return (ArrayList<Person>) persons;
+    }
+
+    public static FarmHouse getInstance(){
+        return FARMHOUSE;
     }
 }
