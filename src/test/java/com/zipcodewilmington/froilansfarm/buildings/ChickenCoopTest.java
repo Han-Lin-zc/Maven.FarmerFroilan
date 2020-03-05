@@ -47,7 +47,7 @@ public class ChickenCoopTest {
     }
 
     @Test
-    public void testArrayListSize() {
+    public void testArrayListSize5() {
         List<Chicken> arrayList = new ArrayList<>();
         arrayList.add(chicken1);
         arrayList.add(chicken2);
@@ -56,6 +56,15 @@ public class ChickenCoopTest {
         arrayList.add(chicken5);
 
         Assert.assertEquals(5, arrayList.size());
+    }
+
+    @Test
+    public void testArrayListSize4() {
+        List<Chicken> arrayList = new ArrayList<>();
+        arrayList.add(chicken1);
+        arrayList.add(chicken2);
+        arrayList.add(chicken3);
+        arrayList.add(chicken4);
     }
 
     @Test
