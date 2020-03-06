@@ -27,9 +27,9 @@ public class ChickenCoopTest {
         testChickenCoop = new ChickenCoop();
         chicken1 = new Chicken();
         chicken2 = new Chicken();
-        Chicken chicken3 = new Chicken();
-        Chicken chicken4 = new Chicken();
-        Chicken chicken5 = new Chicken();
+        chicken3 = new Chicken();
+        chicken4 = new Chicken();
+        chicken5 = new Chicken();
     }
 
     @Test

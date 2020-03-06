@@ -9,13 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FarmHouse {
-    private List<Person> persons;
-    private static FarmHouse FARMHOUSE = new FarmHouse();
-    ;
+    private List<Person> persons = new ArrayList<>();
+    private static FarmHouse FarmHOUSE = new FarmHouse();
 
-    public FarmHouse(){
+    public FarmHouse() {
         this.persons = new ArrayList<>();
-}
+    }
 
     public FarmHouse(List<Person> persons) {
         this.persons = persons;
@@ -25,29 +24,23 @@ public class FarmHouse {
         return persons;
     }
 
-    public void FarmHouse1(){
-        persons = new ArrayList<Person>();
-        persons.add(new Farmer("Froilan"));
-        persons.add(new Pilot("Frolinda"));
-
-    }
-
-    public void addPerson1(Person person){
+    public void addPerson1(Person person) {
         persons.add(person);
     }
 
-    public Integer personCount(){
+    public Integer personCount() {
         return persons.size();
     }
 
-    public ArrayList<Person> getList(){
-        return (ArrayList<Person>) persons;
+    public static FarmHouse getInstance() {
+        return FarmHOUSE;
     }
 
-    public static FarmHouse getInstance(){
-        return FARMHOUSE;
-    }
     public void removePerson(Person person) {
         this.persons.remove(person);
+    }
+
+    public boolean removePerson1(Person person) {
+        return persons.remove(persons);
     }
 }

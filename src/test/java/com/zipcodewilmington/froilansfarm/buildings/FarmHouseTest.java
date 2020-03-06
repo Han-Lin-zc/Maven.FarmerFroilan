@@ -26,11 +26,29 @@ public class FarmHouseTest {
         FarmHouse testFarmHouse1;
     }
 
-    @Before
+    @Test
     public void setup() {
         testFarmHouse = new FarmHouse();
         farmer = new Person("Froilan");
-        pilot = new Person("Frolinda");
+        pilot = new Person("Folinda");
+    }
+
+    @Test
+    public void FarmHouseTest() {Assert.assertNull(testFarmHouse);}
+
+    @Test
+    public void FarmHouseConstructorTest() {
+        List<Person> expected = new ArrayList<>();
+        expected.add(farmer);
+        FarmHouse testedFilled = new FarmHouse((expected));
+        List<Person> actual = testedFilled.getPersons();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void addFarmHouseTest() {
+        List<Person> arrayList = new ArrayList<>();
+        Assert.assertTrue(arrayList.add(farmer));
     }
 
     @Test
@@ -43,25 +61,9 @@ public class FarmHouseTest {
     }
 
     @Test
-    public void FarmHouseConstructorTest() {
-        List<Person> expected = new ArrayList<>();
-        expected.add(farmer);
-        FarmHouse testedFilled = new FarmHouse((expected));
-        List<Person> actual = testedFilled.getPersons();
-        Assert.assertEquals(expected, actual);
-
-    }
-
-    @Test
-    public void getPersons() {
-        //Given
-
-
-    }
-
-    @Test
     public void addPerson1() {
         List<Person> arrayList = new ArrayList<>();
+        Assert.assertTrue(arrayList.add(pilot));
 
 
     }
@@ -100,13 +102,6 @@ public class FarmHouseTest {
 
     @Test
     public void removePersonTest() {
-        Person person1 = new Person("");
-        Person actual = person1;
-        Integer actualSize = 0;
-        testFarmHouse.addPerson1(person1);
-        testFarmHouse.removePerson(person1);
 
-        Integer expectedSize = testFarmHouse.personCount();
-        Assert.assertEquals(expectedSize, actualSize);
     }
 }

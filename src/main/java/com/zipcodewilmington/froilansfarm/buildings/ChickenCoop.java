@@ -7,12 +7,9 @@ import java.util.List;
 
 public class ChickenCoop  {
 
-        private List<Chicken> chickens = new ArrayList<Chicken>();
+    private List<Chicken> chickens = new ArrayList<Chicken>();
 
-    public ChickenCoop() {
-        this.chickens = new ArrayList<>();
-
-    }
+    public ChickenCoop() { this.chickens = new ArrayList<>(); }
 
     public ChickenCoop(List<Chicken> chickens) {
         this.chickens = chickens;
@@ -26,9 +23,7 @@ public class ChickenCoop  {
         this.chickens.add(chicken);
     }
 
-    public void removeChicken(Chicken chicken) {
-        this.chickens.remove(chicken);
-    }
+    public void removeChicken(Chicken chicken) { this.chickens.remove(chicken); }
 
     public Integer chickenCount() {
         return chickens.size();
