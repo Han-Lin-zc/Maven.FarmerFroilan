@@ -36,7 +36,6 @@ public class Stable{
     public Horse getHorse(Integer i) {
         return horses.get(i);
     }
-
 }
 
 

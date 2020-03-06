@@ -1,11 +1,17 @@
 package com.zipcodewilmington.froilansfarm.buildings;
 
+import com.zipcodewilmington.froilansfarm.animals.Chicken;
 import com.zipcodewilmington.froilansfarm.animals.Horse;
+import org.junit.After;
+
+
 import org.junit.Assert;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+
 
 public class StableTest {
     Stable testStable;
@@ -37,6 +43,7 @@ public class StableTest {
         Assert.assertEquals(expectedSize,actualSize);
 
     }
+  
     @Test
     public void getHorseTest(){
         Horse horse1 = new Horse();

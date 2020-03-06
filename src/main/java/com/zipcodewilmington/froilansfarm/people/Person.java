@@ -6,7 +6,7 @@ import com.zipcodewilmington.froilansfarm.interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.interfaces.Rider;
 
-public abstract class Person implements NoiseMaker, Eater, Rider
+public class Person implements NoiseMaker, Eater, Rider
 {
     String name;
     Boolean isMounted = false;
