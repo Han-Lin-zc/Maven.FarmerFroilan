@@ -37,4 +37,28 @@ public class StableTest {
         Assert.assertEquals(expectedSize,actualSize);
 
     }
+    @Test
+    public void getHorseTest(){
+        Horse horse1 = new Horse();
+        Horse horse2 = new Horse();
+
+        testStable.addHorse(horse1);
+        testStable.addHorse(horse2);
+
+        Horse actual=horse2;
+        Integer actualSize =1;
+
+        Horse expected=testStable.getHorse(1);
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void countHorseTest(){
+        Horse horse1=new Horse();
+        Horse actual=horse1;
+        Integer actualSize =1;
+        testStable.addHorse(horse1);
+        testStable.horseCount();
+        Integer expectedCount= testStable.horseCount();
+        Assert.assertEquals(expectedCount,actualSize);
+    }
 }
